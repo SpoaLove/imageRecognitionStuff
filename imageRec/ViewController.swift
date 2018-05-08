@@ -61,6 +61,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         picker.delegate = self
         picker.allowsEditing = true
     }
