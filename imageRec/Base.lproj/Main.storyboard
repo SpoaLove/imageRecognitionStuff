@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,85 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="imageRec" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kudo.png" translatesAutoresizingMaskIntoConstraints="NO" id="SXg-W5-P7q">
+                                <rect key="frame" x="37" y="183" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="ICx-SQ-ASo"/>
+                                    <constraint firstAttribute="height" constant="300" id="daA-HT-CTa"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9Yp-eS-uK4">
+                                <rect key="frame" x="0.0" y="547" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pY8-OK-689">
+                                        <rect key="frame" x="101.5" y="0.0" width="172" height="30"/>
+                                        <state key="normal" title="Select Photo from Album"/>
+                                        <connections>
+                                            <action selector="selectPhotoButtonDidPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lOn-pN-bgV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5W-2e-7iO">
+                                        <rect key="frame" x="127" y="30" width="121" height="30"/>
+                                        <state key="normal" title="Take a new Photo"/>
+                                        <connections>
+                                            <action selector="takePhotoButtonDidPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D04-Uk-Yxq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Yln-Kz-FB2">
+                                <rect key="frame" x="0.0" y="100" width="375" height="44.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kudo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PLe-H8-Jar">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100.0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ih3-HB-Cg9">
+                                        <rect key="frame" x="0.0" y="24" width="375" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="PLe-H8-Jar" firstAttribute="leading" secondItem="Yln-Kz-FB2" secondAttribute="leading" id="4Ra-yM-tBM"/>
+                                    <constraint firstItem="ih3-HB-Cg9" firstAttribute="leading" secondItem="Yln-Kz-FB2" secondAttribute="leading" id="C2p-5Q-jFj"/>
+                                    <constraint firstAttribute="trailing" secondItem="PLe-H8-Jar" secondAttribute="trailing" id="d6s-L4-yWO"/>
+                                    <constraint firstAttribute="trailing" secondItem="ih3-HB-Cg9" secondAttribute="trailing" id="klm-Ch-E0G"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Yp-eS-uK4" secondAttribute="bottom" constant="60" id="2Cy-1L-M53"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yln-Kz-FB2" secondAttribute="trailing" id="2RR-n5-UsO"/>
+                            <constraint firstItem="Yln-Kz-FB2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="EYS-ZZ-79l"/>
+                            <constraint firstItem="SXg-W5-P7q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="L13-2Y-RqZ"/>
+                            <constraint firstItem="Yln-Kz-FB2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Meh-DF-XHa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Yp-eS-uK4" secondAttribute="trailing" id="VCc-0g-LC5"/>
+                            <constraint firstItem="9Yp-eS-uK4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="adK-vg-dSM"/>
+                            <constraint firstItem="SXg-W5-P7q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yut-Fa-K5V"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="percentageLabel" destination="ih3-HB-Cg9" id="d7i-Wq-jEV"/>
+                        <outlet property="photoImageView" destination="SXg-W5-P7q" id="Hb0-Rj-Nh1"/>
+                        <outlet property="resultLabel" destination="PLe-H8-Jar" id="rTd-2c-Rim"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="kudo.png" width="1034" height="1034"/>
+    </resources>
 </document>

@@ -15,6 +15,9 @@
 		CB0BFD5E20A1BC9800353B2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB0BFD5C20A1BC9800353B2C /* LaunchScreen.storyboard */; };
 		CB0BFD6920A1BC9900353B2C /* imageRecTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0BFD6820A1BC9900353B2C /* imageRecTests.swift */; };
 		CB0BFD7420A1BC9900353B2C /* imageRecUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0BFD7320A1BC9900353B2C /* imageRecUITests.swift */; };
+		CB0BFD8220A1BE3E00353B2C /* kudo.png in Resources */ = {isa = PBXBuildFile; fileRef = CB0BFD8120A1BE3E00353B2C /* kudo.png */; };
+		CB0BFD8620A1C1E500353B2C /* UIImageToCVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0BFD8520A1C1E500353B2C /* UIImageToCVPixelBuffer.swift */; };
+		CB0BFD8820A1D04D00353B2C /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CB0BFD8720A1D04D00353B2C /* MobileNet.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		CB0BFD6F20A1BC9900353B2C /* imageRecUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = imageRecUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB0BFD7320A1BC9900353B2C /* imageRecUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageRecUITests.swift; sourceTree = "<group>"; };
 		CB0BFD7520A1BC9900353B2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB0BFD8120A1BE3E00353B2C /* kudo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kudo.png; sourceTree = "<group>"; };
+		CB0BFD8520A1C1E500353B2C /* UIImageToCVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageToCVPixelBuffer.swift; sourceTree = "<group>"; };
+		CB0BFD8720A1D04D00353B2C /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +107,11 @@
 			children = (
 				CB0BFD5020A1BC9400353B2C /* AppDelegate.swift */,
 				CB0BFD5220A1BC9400353B2C /* ViewController.swift */,
+				CB0BFD8520A1C1E500353B2C /* UIImageToCVPixelBuffer.swift */,
+				CB0BFD8720A1D04D00353B2C /* MobileNet.mlmodel */,
 				CB0BFD5420A1BC9400353B2C /* Main.storyboard */,
 				CB0BFD5A20A1BC9800353B2C /* Assets.xcassets */,
+				CB0BFD8120A1BE3E00353B2C /* kudo.png */,
 				CB0BFD5C20A1BC9800353B2C /* LaunchScreen.storyboard */,
 				CB0BFD5F20A1BC9800353B2C /* Info.plist */,
 				CB0BFD5720A1BC9400353B2C /* imageRec.xcdatamodeld */,
@@ -234,6 +243,7 @@
 			files = (
 				CB0BFD5E20A1BC9800353B2C /* LaunchScreen.storyboard in Resources */,
 				CB0BFD5B20A1BC9800353B2C /* Assets.xcassets in Resources */,
+				CB0BFD8220A1BE3E00353B2C /* kudo.png in Resources */,
 				CB0BFD5620A1BC9400353B2C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,7 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB0BFD8620A1C1E500353B2C /* UIImageToCVPixelBuffer.swift in Sources */,
 				CB0BFD5320A1BC9400353B2C /* ViewController.swift in Sources */,
+				CB0BFD8820A1D04D00353B2C /* MobileNet.mlmodel in Sources */,
 				CB0BFD5920A1BC9400353B2C /* imageRec.xcdatamodeld in Sources */,
 				CB0BFD5120A1BC9400353B2C /* AppDelegate.swift in Sources */,
 			);
@@ -437,6 +449,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DLW9CMP935;
 				INFOPLIST_FILE = imageRec/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,6 +468,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DLW9CMP935;
 				INFOPLIST_FILE = imageRec/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
